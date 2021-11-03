@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-background: #242333;
+    --secondary-background: #3b1ea3;
+    --color: #FFFFFF;
+    --blue: #01B0D3;
+    --blue-hovered: #0163d3;
+
+    /* font size */
+    --heroTitle: 500%;
+    --headerText: 160%;
+    --h3: 130%;
+    --normal: 100%;
+
+    /* font family */
+    --primary-font: 'Open Sans', sans-serif;
+    --heroTitleFont: 'Times New Roman', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--color);
+    color: var(--color);
+    font-family: var(--primary-font);
+    width: 100vw;
+    overflow: hidden;
+}
+
+nav#navbar {
+    display: flex;
+    background-color: #242333d7;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+nav#navbar > img#logoNavbar {
+    width: 10%;
+    margin-left:3%;
+}
+nav#navbar > ul#listActions {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+nav#navbar > ul#listActions > li {
+    display: inline;
+    font-size: var(--h3);
+    cursor: pointer;
+}
+
+
+header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%231e3266'%3e%3c/rect%3e%3cpath d='M1488 560L0 560 L0 332.94Q61.3 274.24%2c 120 335.54Q163.48 259.02%2c 240 302.51Q298.27 288.78%2c 312 347.06Q342.38 305.44%2c 384 335.83Q459.79 291.62%2c 504 367.4Q517.08 308.48%2c 576 321.55Q651.66 277.22%2c 696 352.88Q768.5 305.38%2c 816 377.87Q844.26 286.13%2c 936 314.39Q987.09 245.48%2c 1056 296.56Q1134.07 254.63%2c 1176 332.69Q1252.37 289.06%2c 1296 365.42Q1361.36 310.78%2c 1416 376.14Q1420.19 308.33%2c 1488 312.52z' fill='%23182f5d'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 429.2Q20.9 378.1%2c 72 398.99Q153.25 360.24%2c 192 441.48Q219.58 397.06%2c 264 424.65Q304 344.65%2c 384 384.66Q458.62 339.28%2c 504 413.9Q575.73 365.63%2c 624 437.36Q641.7 383.06%2c 696 400.76Q741.55 326.31%2c 816 371.85Q859.92 343.77%2c 888 387.7Q964.48 344.18%2c 1008 420.66Q1033.17 325.83%2c 1128 351Q1174.79 325.79%2c 1200 372.59Q1264.89 365.49%2c 1272 430.38Q1286.52 372.89%2c 1344 387.41Q1412.45 335.86%2c 1464 404.31z' fill='%2325467d'%3e%3c/path%3e%3cpath d='M1488 560L0 560 L0 505.54Q58.67 444.21%2c 120 502.87Q162.69 473.56%2c 192 516.24Q214.79 419.03%2c 312 441.83Q355.92 413.75%2c 384 457.67Q430.85 432.52%2c 456 479.37Q464.93 416.3%2c 528 425.23Q571.72 396.95%2c 600 440.67Q653.17 421.84%2c 672 475.01Q750.13 433.13%2c 792 511.26Q799 446.25%2c 864 453.25Q910.63 379.88%2c 984 426.5Q1086.2 408.71%2c 1104 510.91Q1139.79 426.7%2c 1224 462.49Q1243.73 410.23%2c 1296 429.96Q1342.66 404.62%2c 1368 451.28Q1447.54 410.81%2c 1488 490.35z' fill='%23356cb1'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 547.51Q77.84 505.35%2c 120 583.18Q126.01 517.19%2c 192 523.2Q237.9 449.11%2c 312 495.01Q405.35 468.36%2c 432 561.7Q443.2 500.9%2c 504 512.1Q570.83 458.93%2c 624 525.76Q668.02 497.78%2c 696 541.8Q740.02 465.82%2c 816 509.84Q857.31 479.14%2c 888 520.45Q912.9 473.35%2c 960 498.25Q1052.43 470.68%2c 1080 563.12Q1134.18 497.3%2c 1200 551.48Q1253.57 533.05%2c 1272 586.62Q1281.94 524.56%2c 1344 534.5Q1411.03 481.52%2c 1464 548.55z' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center;
+    background-size: cover;
+}
+header > div#leftContent {
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+header > div#leftContent > h1 {
+    font-size: var(--heroTitle)
+}
+header > div#leftContent > h1:last-of-type {
+    padding-left: 2%;
+    margin-bottom: 5%;
+}
+header > div#leftContent > p#description {
+    font-size: var(--headerText);
+    width: 90%;
+    margin-bottom: 5%;
+    text-align: justify;
+}
+header > div#leftContent > button#cta {
+    padding: 3%;
+    border: none;
+    font-size: var(--headerText);
+    background-color: var(--blue);
+    color: var(--color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+header > div#leftContent > button#cta:hover {
+    background-color: var(--blue-hovered);
+}
+header > div#leftContent > button#second-cta {
+    padding: 3%;
+    border: 2px solid var(--color);
+    font-size: var(--headerText);
+    background-color: transparent;
+    color: var(--color);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    margin-left: 2%;
+    cursor: pointer;
+}
+header > div#leftContent > button#second-cta:hover {
+    color: var(--primary-background);
+    background-color: var(--color);
+}
+header > div#rightContent {
+    display: flex; 
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#heroIMG {
+    width: 80%;
+    height: fit-content;
+}
