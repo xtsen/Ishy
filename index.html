@@ -7,13 +7,15 @@
         <title>Ishy</title>
         <link rel="stylesheet" href="default.css">
     </head>
-    <body>
+    <body onload="load();">
         <nav id="navbar">
-            <img id="logoNavbar" src="./heroIMG.png" alt="la photo de profil du bot">
+            <img id="logoNavbar" src="./pp.png" alt="la photo de profil du bot">
             <ul id="listActions">
-                <li>Fonctionnalités</li>
-                <li>Tutoriels</li>
-                <li>Ajouter à Discord</li>
+                <a href="#titleSection" class="js-scrollTo">
+                    <li class="action">Fonctionnalités</li>
+                </a>
+                <li class="action">Tutoriels</li>
+                <li class="action">Ajouter à Discord</li>
             </ul>
         </nav>
         <header id="header">
@@ -22,11 +24,28 @@
                 <h1>Le bot.</h1>
                 <p id="description">Venez découvrir la multitude de fonctionnalités fournis par Ishy, un bot discord qui vous permettra de rassembler tout vos bot en un seul.</p>
                 <button id="cta">Inviter le bot</button>
-                <button id="second-cta">Découvrir</button>
+                <button id="second-cta">
+                    <a href="#titleSection" class="js-scrollTo">Découvrir</a>
+                </button>
             </div>
             <div id="rightContent">
                 <img id="heroIMG" src="./heroIMG.png" alt="image d'une interface de discord">
             </div>
         </header>
+        <h1 id="titleSection">Fonctionnalités</h1>
+        <main id="main">
+        </main>
+        <script src="./main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                    var page = $(this).attr('href'); // Page cible
+                    var speed = 600; // Durée de l'animation (en ms)
+                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>

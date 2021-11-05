@@ -26,9 +26,13 @@ body {
     color: var(--color);
     font-family: var(--primary-font);
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
 nav#navbar {
     display: flex;
     background-color: #242333d7;
@@ -41,7 +45,7 @@ nav#navbar {
     z-index: 100;
 }
 nav#navbar > img#logoNavbar {
-    width: 10%;
+    width: 5%;
     margin-left:3%;
 }
 nav#navbar > ul#listActions {
@@ -50,12 +54,11 @@ nav#navbar > ul#listActions {
     width: 50%;
     list-style: none;
 }
-nav#navbar > ul#listActions > li {
+li.action {
     display: inline;
     font-size: var(--h3);
     cursor: pointer;
 }
-
 
 header {
     height: 100vh;
@@ -121,4 +124,47 @@ header > div#rightContent {
 #heroIMG {
     width: 80%;
     height: fit-content;
+}
+#titleSection {
+    color: #242333;
+    font-size: 300%;
+    margin-top: 5%;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    min-height: 50vh;
+    margin-bottom: 10%;
+    content: " ";
+}
+.feature {
+    width: 25vw;
+    height: fit-content;
+    background-color: var(--primary-background);
+    content: "";
+    padding: 1%;
+    margin: 5% auto 0;
+    border-radius: 10px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 160%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #343342;
+}
+.nameFeature {
+    margin-bottom: 5%;
+}
+.desc {
+    margin-top: 3%;
+    background-color: #343342;
+    padding: 3%;
+    border-radius: 10px;
 }
